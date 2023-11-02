@@ -1,23 +1,70 @@
-.counter {
-    background-color:#f5f5f5;
-    padding: 20px 0;
-    border-radius: 5px;
+.container-counter{
+    display: flex;
+    padding: 16px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 12px;
+    flex: 1 0 0;
+
+    border-radius: 16px;
+    background: #FFF;
+    box-shadow: 0px 6px 8px 0px rgba(0, 0, 0, 0.10);
 }
 
-.count-title {
-    font-size: 40px;
-    font-weight: normal;
-    margin-top: 10px;
-    margin-bottom: 0;
-    text-align: center;
+.distribution-counter{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    align-self: stretch;
+    height: 72px;
+}
+.icon-counter{
+    display: flex;
+    width: 64px;
+    height: 72px;
+    padding: 12px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    border-radius: 8px;
+    background: #EEF7FF;
+}
+.icon-counter>i{
+    color: #57ACFE;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+}
+.text-counter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.count-title, .info-title {
+    color: #57ACFE;
+    font-family: Inter;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: unset;
 }
 
 .count-text {
-    font-size: 13px;
-    font-weight: normal;
-    margin-top: 10px;
-    margin-bottom: 0;
-    text-align: center;
+    color: #737373;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: unset;
 }
 
 .fa-2x {

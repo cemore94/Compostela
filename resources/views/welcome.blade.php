@@ -31,22 +31,52 @@
         <!-- Styles -->
         <link href="{{ asset('css/counter.css') }}" rel="stylesheet">
 
+        <script src="{{ asset('js/gray.js') }}" defer></script>
+        <link href="{{ asset('css/gray.css') }}" rel="stylesheet">
+
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Overpass:wght@300&family=Roboto:wght@100&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Open+Sans&family=Overpass:wght@300&family=Roboto:wght@100&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
         
     </head>
     <body class="antialiased">
         @include('includes.header') 
         <div class="row">
-            <div class="col-12 col-sm-6" style="padding: unset;">
-                <img style="width:100%" src="<?php echo asset('/imagenes/section_p1.png') ?>" alt="">
+            <div class="col-12 col-sm-6 main-row-landing" style="padding: unset;">
+                <img style="width:100%" src="<?php echo asset('/imagenes/arquitecto.jpg') ?>" alt="">
+                <div class="main-section">
+                    <span class="main-section-title">
+                        Nuestros proyectos
+                    </span>
+                    <span class="main-section-paragraph">
+                        Lorem ipsum contacteur
+                    </span>
+                    <button>
+                        <span>Lorem ipsum</span>
+                    </button>
+                </div>
             </div>
-            <div class="col-12 col-sm-6" style="padding: unset;">
-                <img style="width:100%" src="<?php echo asset('/imagenes/section_p2.png') ?>" alt="">
+            <div class="col-12 col-sm-6 main-row-landing" style="padding: unset;">
+                <img style="width:100%" src="<?php echo asset('/imagenes/megaconstrucciones.jpg') ?>" alt="">
+                <div class="main-section">
+                    <span class="main-section-title">
+                        Nuestras obras
+                    </span>
+                    <span class="main-section-paragraph">
+                        Lorem ipsum contacteur
+                    </span>
+                    <button>
+                        <span>Lorem ipsum</span>
+                    </button>
+                </div>
             </div>
         </div>
+
         <div class="container">
             <div class="row row-blue">
                 <div class="col-12 col-sm-6 container-blue">
@@ -54,21 +84,145 @@
                     <p class="text-blue">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque consectetur.</p>
                     <button class="button-blue"><span>Lorem ipsum</span></button>
                 </div>
-                <div class="col-12 col-sm-6 container-blue">
-                    <img style="width:100%" src="<?php echo asset('/imagenes/change_contrast.png') ?>" alt="">
-                </div>
-                <div class="col-12 col-sm-12">
-                    <div class="col-4">
+                <div class="col-12 col-sm-6 container-blue dynamic-gray">
+                    
+                    <div class="blackwhite" style='background-image: url("<?php echo asset('/imagenes/oscureciendo.jpg') ?>");'>
 
                     </div>
-                    <div class="col-4">
-                        
+                    <div class="colorfull" style='background-image: url("<?php echo asset('/imagenes/oscureciendo.jpg') ?>");'>
+
                     </div>
-                    <div class="col-4">
-                        
+                    <button class="boton-movil">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M406.6 374.6l96-96c12.5-12.5 12.5-32.8 0-45.3l-96-96c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224l-293.5 0 41.4-41.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-96 96c-12.5 12.5-12.5 32.8 0 45.3l96 96c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 288l293.5 0-41.4 41.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"/></svg>
+                    </button>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-sm-4">
+                        <?php $data = array('nombre' => 'CLIENTES'); ?>
+                        @include('includes.counter', $data)
+                    </div>
+                    <div class="col-12 col-sm-4">
+                        <?php $data = array('nombre' => 'PROYECTOS REALIZADOS'); ?>
+                        @include('includes.counter')
+                    </div>
+                    <div class="col-12 col-sm-4">
+                        <?php $data = array('nombre' => 'CLIENTES'); ?>
+                        @include('includes.counter')
                     </div>
                 </div>
             </div>
         </div>
+        
+        <div class="container">
+            <div class="row row-blue">
+                <div class="col-12 title-blue">
+                    <h1>LOREM IMPSUM CONTACTEUR</h1>
+                    <span class="separator"></span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque consectetur.</p>
+                </div>
+                <div class="col-12 col-sm-12">
+                    <div class="row">
+                        <div class="col-12 col-sm-12">
+                            <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <div class="carousel-row">
+                                            @include('includes.cards')
+                                            @include('includes.cards')
+                                            @include('includes.cards')
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="carousel-row">
+                                            @include('includes.cards')
+                                            @include('includes.cards')
+                                            @include('includes.cards')
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="carousel-row">
+                                            @include('includes.cards')
+                                            @include('includes.cards')
+                                            @include('includes.cards')
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true">
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                            <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"></path>
+                                        </svg>
+                                    </span>
+                                    <span class="visually-hidden">Anterior</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true">
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                            <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"></path>
+                                        </svg>
+                                    </span>
+                                    <span class="visually-hidden">Siguiente</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+        <div class="container">
+            <div class="row-blue">
+                <div class="row">
+                    <div class="col-12 col-sm-4">
+                        <?php $texts = array('title' => 'LOREM IPSUM', 'paragraph' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'); ?>
+                        @include('includes.info', $texts)
+                    </div>
+                    <div class="col-12 col-sm-4">
+                        <?php $texts = array('title' => 'LOREM IPSUM', 'paragraph' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'); ?>
+                        @include('includes.info', $texts)
+                    </div>
+                    <div class="col-12 col-sm-4">
+                        <?php $texts = array('title' => 'LOREM IPSUM', 'paragraph' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'); ?>
+                        @include('includes.info', $texts)
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row row-blue">
+                <div class="col-12 title-blue">
+                    <h1>LOREM IMPSUM CONTACTEUR</h1>
+                    <span class="separator"></span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque consectetur.</p>
+                </div>
+                <div class="col-12 col-sm-12">
+                    <div class="row">
+                        <div class="masonry">
+                            <div class="masonry-first">
+                                <div class="masonry-element"></div>
+                                <div class="masonry-element"></div>
+                            </div>
+                            <div class="masonry-second">
+                                <div class="masonry-section">
+                                    <div class="masonry-section-first">
+                                        <div class="masonry-element"></div>
+                                        <div class="masonry-element"></div>
+                                    </div>
+                                    <div class="masonry-section-second">
+                                        <div class="masonry-element"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row-blue">
+            <img style="width:100%" src="<?php echo asset('/imagenes/windows.png') ?>" alt="">
+        </div>
     </body>
+    @include('includes.footer')
 </html>

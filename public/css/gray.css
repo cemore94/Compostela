@@ -1,0 +1,43 @@
+.dynamic-gray{
+    width: 100%;
+    height: 518px;
+    position: relative;
+}
+
+.dynamic-gray > div{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.blackwhite{
+    left: 0px;
+    clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
+    filter: grayscale(100%);
+}
+.colorfull{
+    right: 0px;
+    clip-path: polygon(100% 0, 50% 0, 50% 100%, 100% 100%);
+}
+.boton-movil{
+    color: white;
+    border-radius: 20px;
+    padding: 5px 0px;
+    background-color: transparent;
+    width: 50px;
+    height: 50px;
+    z-index: 2;
+    position: absolute;
+    left: calc(50% - 25px);
+    top: calc(50% - 25px);
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+.boton-movil>svg{
+    width: 30px;
+    height: 30px;
+    fill: white;
+}
