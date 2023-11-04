@@ -12,15 +12,13 @@
     .nav-item{
         margin: 0px 10px;
     }
-    .nav-item>a{
-        font-weight: 600;
-    }
+    
 </style>
 <header>
     <div class="container">
         <nav class="navbar navbar-expand-lg ">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="{{ url('/') }}">
                     <img src="<?php echo asset('/imagenes/compostela_logo.png') ?>">
                     <img src="<?php echo asset('/imagenes/compostela_nombre.png') ?>">
                 </a>

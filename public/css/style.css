@@ -262,6 +262,8 @@ div.card-body{
     gap: 40px;
     flex: 1 0 0;
     align-self: stretch;
+    padding: unset;
+    position: relative;
 }
 
 div.card-body > div{
@@ -269,6 +271,13 @@ div.card-body > div{
     align-items: flex-end;
     gap: 10px;
     align-self: stretch;
+    position: absolute;
+    bottom: -130px;
+    transition: bottom 0.5s ease;
+}
+
+div.card-body:hover > div{
+    bottom: 70px;
 }
 
 div.card-body > div > i{
@@ -277,9 +286,53 @@ div.card-body > div > i{
 
     border-radius: 6px;
     background: #57ACFE;
+    height: 66px;
+    transition: height 0.5s ease;
 }
 
-div.card-body > div > span{
+div.card-body:hover > div > i{
+    height: 182px;
+}
+
+.card-body-only-text.complete{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+button.card-button-info{
+    opacity: 0;
+    width: 209px;
+    height: 48px;
+    padding: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    border-radius: 31px;
+    background: #4688C8;
+
+    position: absolute;
+    bottom: 0px;
+
+    transition: opacity 1s ease;
+}
+
+div.card-body:hover > button.card-button-info{
+    opacity: 1;
+}
+
+button.card-button-info > span{
+    color: #FFF;
+    font-family: Open Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+span.card-body-title{
     align-self: stretch;
 
     color: #FFF;
@@ -288,6 +341,23 @@ div.card-body > div > span{
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+}
+
+span.card-body-paragraph{
+    align-self: stretch;
+
+    color: #FFF;
+    font-family: Open Sans;
+    font-size: 18px;
+    font-style: normal;
+    line-height: normal;
+
+    opacity: 0;
+    transition: opacity 2s ease;
+}
+
+.card-container:hover > .card-body > div > div.card-body-only-text.complete > span.card-body-paragraph{
+    opacity: 1;
 }
 
 .carousel-row{
@@ -383,7 +453,7 @@ div.card-body > div > span{
     flex-direction: column;
     align-items: center;
     align-self: stretch;
-    background-image: url('/imagenes/edificios.png');
+    background-image: url('../imagenes/edificios.png');
 }
 
 .masonry > .masonry-first > div:last-child{
@@ -393,7 +463,7 @@ div.card-body > div > span{
     flex-direction: column;
     align-items: center;
     align-self: stretch;
-    background-image: url('/imagenes/edificios_row.png');
+    background-image: url('../imagenes/edificios_row.png');
 }
 
 .masonry > .masonry-second{
@@ -423,7 +493,7 @@ div.card-body > div > span{
 }
 
 .masonry-second > .masonry-section > .masonry-section-first > .masonry-element{
-    background-image: url('/imagenes/edificios_row.png');
+    background-image: url('../imagenes/edificios_row.png');
     height: 325px;
     background-size: cover;
     background-repeat: no-repeat;
@@ -439,7 +509,7 @@ div.card-body > div > span{
 }
 
 .masonry-second > .masonry-section > .masonry-section-second > .masonry-element{
-    background-image: url('/imagenes/edificios.png');
+    background-image: url('../imagenes/edificios.png');
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
@@ -487,4 +557,20 @@ div.footer-social > a{
 
 div.footer-social > a > svg{
     fill: #5B5C5C;
+}
+
+.nav-link{
+    color: rgba(0,0,0, 0.65);
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    line-height: normal;
+}
+
+.nav-link.active{
+    color: rgba(0,0,0, 1);
+}
+
+.nav-link:hover{
+    color: rgba(0,0,0, 0.8);
 }

@@ -23,6 +23,7 @@
     },
     "dependencies": {
         "bootstrap": "^5.3.2",
+        "mdb-ui-kit": "^6.4.2",
         "responsive-carousel": "^1.5.8"
     }
 }

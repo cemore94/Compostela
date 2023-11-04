@@ -35,7 +35,12 @@
     <div class="card-body">
         <div>
             <i></i>
-            <SPAN>LOREM IPSUM DOLOR CONTACTEUR</SPAN>
+            <div class="card-body-only-text complete">
+                <span class="card-body-title">LOREM IPSUM DOLOR CONTACTEUR</span>
+                <span class="card-body-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/>Nunc aliquet ut massa at scelerisque.</span>
+                
+            </div>
         </div>
+        <button class="card-button-info"><span>Lorem ipsum</span></button>
     </div>
 </div>
